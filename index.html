@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Ramos Photography</title>
+    <link rel="stylesheet" href="/css/paginaPrincipal.css" id="linkCSS">
+    <link rel="stylesheet" href="/css/paginaRetratos.css"> 
+</head>
+<body>
+    <main id="mainIndex">
+        <header id="headerIndex">
+            <h1 id="h1Index">ER</h1>
+            <nav class="desktop-nav">
+                <div class="nav-item dropdown">
+                    <button class="botoesIndex">Portfólio</button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" id="navRetratos">Retratos</a>
+                        <a href="#" class="dropdown-item" id="navCasamento">Casamento</a>
+                        <a href="#" class="dropdown-item" id="navGastronomico">Gastronômico</a>
+                        <a href="#" class="dropdown-item" id="navCorporativo">Corporativo-Eventos</a>
+                    </div>
+                </div>
+                <button class="botoesIndex serviços">Serviços</button>
+                <button class="botoesIndex sobre">Sobre</button>
+                <button class="botoesIndex album">Álbum de clientes</button>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <button class="botoesIndex serviços-mobile">Serviços</button>
+                <button class="botoesIndex sobre-mobile">Sobre</button>
+                <button class="botoesIndex album-mobile">Álbum de clientes</button>
+                <button class="botoesIndex portfolio-mobile">retratos</button>
+                <button class="botoesIndex casamento-mobile">casamento</button>
+                <button class="botoesIndex gastronomico-mobile">gastronomico</button>
+                <button class="botoesIndex corporativo-mobile">corporativo</button>
+
+
+            </div>
+        </header>
+
+        <section id="sectionPrincipal">
+            <img src="https://static.wixstatic.com/media/ef3021_dcd2225ea30943dabaf9be7f0b7b029c~mv2.jpg/v1/fill/w_851,h_830,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ef3021_dcd2225ea30943dabaf9be7f0b7b029c~mv2.jpg" alt="Eduardo Ramos Photography" class="hero-image">
+            <div class="hero-content">
+                <h1 class="hero-title">EDUARDO RAMOS</h1>
+                <a href="https://cal.com/agendamentoedu" target="_blank" class="agendar-btn">Agendar</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">EDUARDO RAMOS</div>
+                    <div class="footer-tagline">Capturando momentos únicos</div>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link portfolio-footer">Portfólio</a>
+                    <a href="#" class="footer-link serviços">Serviços</a>
+                    <a href="#" class="footer-link sobre">Sobre</a>
+                    <a href="#" class="footer-link">Contato</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">💼</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">© 2025 Eduardo Ramos. Todos os direitos reservados.</div>
+            </div>
+        </footer>
+    </main>
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>

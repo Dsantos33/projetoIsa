@@ -1,0 +1,441 @@
+/* ==================================== */
+/* ESTILOS GERAIS E ESTRUTURA (Mantidos) */
+/* ==================================== */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  /* Garante que o fundo escuro se aplique caso o conteúdo não preencha a tela */
+  background-color: #1a1a1a;
+}
+
+#mainIndex {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#headerIndex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 0 40px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  height: 80px;
+  flex-shrink: 0;
+  z-index: 10; /* Garante que o header fique acima do conteúdo */
+}
+
+#h1Index {
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  transition: all 0.3s ease;
+}
+
+#h1Index:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.botoesIndex {
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.botoesIndex::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff6b6b, #ffa500);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.botoesIndex:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+
+.botoesIndex:hover::before {
+  left: 0;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+.mobile-menu .botoesIndex {
+  font-size: 24px;
+  padding: 20px;
+  margin: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 80%;
+  text-align: center;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+/* 
+  ESTILOS EXCLUÍDOS DA PÁGINA PRINCIPAL:
+  - .hero-image
+  - .hero-content
+  - .hero-title
+  - .agendar-btn 
+  Eles não são usados na página de álbuns.
+*/
+
+
+/* ==================================== */
+/* NOVOS ESTILOS PARA A PÁGINA DE ÁLBUM */
+/* ==================================== */
+
+.album-container {
+  width: 100%;
+  height: 100%;
+  padding: 50px 60px;
+  overflow-y: auto; /* Permite scroll se houver muitos álbuns */
+  color: #fff;
+}
+
+.album-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.album-grid {
+  display: grid;
+  /* Cria colunas responsivas: cada uma com no mínimo 320px e no máximo 1 fração do espaço */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.album-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Estilos para a animação de entrada */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.album-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.album-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.album-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+  transition: transform 0.4s ease;
+}
+
+.album-item:hover .album-image {
+  transform: scale(1.1);
+}
+
+.album-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Alinha o texto na parte de baixo */
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 10%, transparent 70%);
+  opacity: 1; /* Overlay sempre visível para um estilo mais direto */
+  transition: background 0.4s ease;
+}
+
+.album-item:hover .album-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 1) 20%, transparent 80%);
+}
+
+.album-categoria {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #bbb;
+  margin-bottom: 5px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s;
+}
+
+.album-item-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform 0.4s ease 0.2s, opacity 0.4s ease 0.2s;
+}
+
+/* Mostra o texto do overlay no hover */
+.album-item:hover .album-categoria,
+.album-item:hover .album-item-title {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ==================================== */
+/* FOOTER (Mantido) E RESPONSIVIDADE    */
+/* ==================================== */
+
+footer {
+  background: #0a0a0a;
+  color: white;
+  padding: 30px 40px 20px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #ff6b6b, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(45deg, #ff6b6b, #ffa500);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  color: #ccc;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+  color: #fff;
+  background: rgba(255, 107, 107, 0.1);
+  border-color: rgba(255, 107, 107, 0.3);
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  #headerIndex {
+    padding: 0 20px;
+    height: 60px;
+  }
+  #h1Index {
+    font-size: 2rem;
+  }
+  
+  /* Ajustes responsivos para a página de álbuns */
+  .album-container {
+    padding: 30px 20px;
+  }
+  .album-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .album-grid {
+    gap: 20px;
+    /* Para telas menores, garante que os cards não fiquem espremidos */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .album-item-title {
+    font-size: 1.4rem;
+  }
+
+
+  /* Estilos do Footer responsivo (Mantidos) */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  .social-links {
+    margin-top: 10px;
+  }
+}
+
+
