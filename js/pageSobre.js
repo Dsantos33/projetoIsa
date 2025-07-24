@@ -52,7 +52,6 @@ export function createSobreSection() {
     updateCarousel();
 }
 
-// ========== FUNÇÕES DO CARROSSEL ==========
 export function updateCarousel() {
     const container = document.getElementById('comentariosContainer');
     const dots = document.querySelectorAll('.carousel-dot');
@@ -81,7 +80,6 @@ export function goToComment(index) {
     updateCarousel();
 }
 
-// Expor funções globalmente para os onclick do HTML
 window.nextComment = nextComment;
 window.previousComment = previousComment;
 window.goToComment = goToComment;

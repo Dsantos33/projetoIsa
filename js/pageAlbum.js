@@ -1,4 +1,3 @@
-// ========== PÁGINA DE ÁLBUM ==========
 import { albuns } from './data.js';
 
 export function createAlbumSection() {
@@ -23,7 +22,6 @@ export function createAlbumSection() {
         </div>
     `;
 
-    // Animação em cascata
     setTimeout(() => {
         const albumItems = document.querySelectorAll('.album-item');
         albumItems.forEach((item, index) => {

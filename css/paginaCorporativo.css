@@ -154,9 +154,6 @@ body.body-menu-open {
   font-weight: 300;
 }
 
-/* ========================================= */
-/*              CONTEÚDO PRINCIPAL           */
-/* ========================================= */
 section#sectionPrincipal {
   flex: 1;
   display: flex;
@@ -213,9 +210,6 @@ section#sectionPrincipal {
   filter: brightness(1.1);
 }
 
-/* ========================================= */
-/*                   FOOTER                  */
-/* ========================================= */
 footer {
   background: #0a0a0a;
   color: white;
@@ -248,26 +242,20 @@ footer {
 }
 
 @media (max-width: 768px) {
-  /* Header e Menu Mobile */
   .desktop-nav { display: none; }
   .hamburger { display: flex; }
 
-  /* CORREÇÃO AQUI: Garante que o ícone do menu fique fixo no canto da tela */
   .hamburger.active {
     position: fixed;
-    top: 15px; /* Ajuste conforme a altura do seu header mobile */
+    top: 15px; 
     right: 20px;
   }
 
   #headerIndex { padding: 0 20px; height: 60px; }
   #h1Index { font-size: 2rem; }
-
-  /* Galeria */
   .retratos-container { padding: 30px 20px; }
   .retratos-grid { column-count: 1; }
   .retratos-title { font-size: 2.2rem; letter-spacing: 8px; margin-bottom: 40px; }
-
-  /* Footer */
   .footer-content { flex-direction: column; text-align: center; }
   .footer-links { flex-direction: column; gap: 15px; }
 }

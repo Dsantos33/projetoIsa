@@ -1,4 +1,3 @@
-// ========== PÁGINA DE RETRATOS ==========
 import { imagensRetratos } from './data.js';
 
 export function createRetratosSection() {
@@ -17,7 +16,6 @@ export function createRetratosSection() {
         </div>
     `;
 
-    // Animação em cascata
     setTimeout(() => {
         document.querySelectorAll('.retrato-item').forEach((item, index) => {
             setTimeout(() => {

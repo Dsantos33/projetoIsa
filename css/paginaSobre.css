@@ -147,7 +147,6 @@ section {
   overflow-y: auto;
 }
 
-/* Estilos melhorados da página sobre */
 .sobre-container {
   display: flex;
   flex-direction: column;
@@ -251,7 +250,6 @@ section {
   color: #fff;
 }
 
-/* Carrossel de comentários - Design Melhorado */
 .comentarios-section {
   background: linear-gradient(135deg, #111 0%, #000 100%);
   padding: 80px 40px;

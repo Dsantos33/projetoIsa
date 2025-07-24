@@ -154,9 +154,6 @@ body.body-menu-open {
   font-weight: 300;
 }
 
-/* ========================================= */
-/*              CONTEÚDO PRINCIPAL           */
-/* ========================================= */
 section#sectionPrincipal {
   flex: 1;
   display: flex;
@@ -213,9 +210,6 @@ section#sectionPrincipal {
   filter: brightness(1.1);
 }
 
-/* ========================================= */
-/*                   FOOTER                  */
-/* ========================================= */
 footer {
   background: #0a0a0a;
   color: white;

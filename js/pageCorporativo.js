@@ -16,7 +16,6 @@ export function createCorporativoSection() {
         </div>
     `;
 
-    // Animação em cascata
     setTimeout(() => {
         document.querySelectorAll('.retrato-item').forEach((item, index) => {
             setTimeout(() => {

@@ -22,7 +22,6 @@ export function createServicosSection() {
         </div>
     `;
     
-    // Animação em cascata
     setTimeout(() => {
         const servicoItems = document.querySelectorAll('.servico-item');
         servicoItems.forEach((item, index) => {

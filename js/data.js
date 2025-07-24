@@ -1,6 +1,3 @@
-// ========== DADOS CENTRALIZADOS ==========
-
-// Dados dos retratos
 export const imagensRetratos = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQARFvaS6IN-08nhXym545fNq3fZG6gn8EVUA&s",
     "https://img.freepik.com/fotos-gratis/retrato-da-mulher-dos-olhos-verdes_1122-540.jpg?semt=ais_hybrid&w=740",
@@ -26,7 +23,6 @@ export const imagensCasamento = [
 
 
 
-// Dados dos comentários
 export const comentarios = [
     {
         texto: "Tudo em movimento Os sorrisos, as conversas, as danças, os abraços...muito orgânico!parabéns",
@@ -60,7 +56,6 @@ export const comentarios = [
     }
 ];
 
-// Dados dos serviços
 export const servicos = [
     {
         titulo: "Fotografia de Casamento",
@@ -88,7 +83,6 @@ export const servicos = [
     }
 ];
 
-// Dados dos álbuns
 export const albuns = [
     {
         titulo: "Baby Nico",

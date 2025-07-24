@@ -1,5 +1,3 @@
-// ========== MAIN.JS - ARQUIVO PRINCIPAL ==========
-// Imports dos módulos
 import { createRetratosSection } from './pageRetratos.js';
 import { createSobreSection } from './pageSobre.js';
 import { createServicosSection } from './pageServicos.js';

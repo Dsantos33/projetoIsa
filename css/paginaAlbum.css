@@ -1,7 +1,3 @@
-/* ==================================== */
-/* ESTILOS GERAIS E ESTRUTURA (Mantidos) */
-/* ==================================== */
-
 * {
   padding: 0;
   margin: 0;
@@ -12,7 +8,6 @@ html, body {
   height: 100vh;
   width: 100vw;
   font-family: Arial, sans-serif;
-  /* Garante que o fundo escuro se aplique caso o conteúdo não preencha a tela */
   background-color: #1a1a1a;
 }
 
@@ -33,7 +28,7 @@ html, body {
   position: relative;
   height: 80px;
   flex-shrink: 0;
-  z-index: 10; /* Garante que o header fique acima do conteúdo */
+  z-index: 10; 
 }
 
 #h1Index {
@@ -156,25 +151,11 @@ section {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
 }
 
-/* 
-  ESTILOS EXCLUÍDOS DA PÁGINA PRINCIPAL:
-  - .hero-image
-  - .hero-content
-  - .hero-title
-  - .agendar-btn 
-  Eles não são usados na página de álbuns.
-*/
-
-
-/* ==================================== */
-/* NOVOS ESTILOS PARA A PÁGINA DE ÁLBUM */
-/* ==================================== */
-
 .album-container {
   width: 100%;
   height: 100%;
   padding: 50px 60px;
-  overflow-y: auto; /* Permite scroll se houver muitos álbuns */
+  overflow-y: auto; 
   color: #fff;
 }
 
@@ -190,7 +171,6 @@ section {
 
 .album-grid {
   display: grid;
-  /* Cria colunas responsivas: cada uma com no mínimo 320px e no máximo 1 fração do espaço */
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
 }
@@ -202,8 +182,6 @@ section {
   cursor: pointer;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  /* Estilos para a animação de entrada */
   opacity: 0;
   transform: translateY(20px);
 }
@@ -222,7 +200,7 @@ section {
 .album-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+  object-fit: cover; 
   transition: transform 0.4s ease;
 }
 
@@ -238,10 +216,10 @@ section {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Alinha o texto na parte de baixo */
+  justify-content: flex-end; 
   padding: 25px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 10%, transparent 70%);
-  opacity: 1; /* Overlay sempre visível para um estilo mais direto */
+  opacity: 1;
   transition: background 0.4s ease;
 }
 
@@ -271,16 +249,11 @@ section {
   transition: transform 0.4s ease 0.2s, opacity 0.4s ease 0.2s;
 }
 
-/* Mostra o texto do overlay no hover */
 .album-item:hover .album-categoria,
 .album-item:hover .album-item-title {
   transform: translateY(0);
   opacity: 1;
 }
-
-/* ==================================== */
-/* FOOTER (Mantido) E RESPONSIVIDADE    */
-/* ==================================== */
 
 footer {
   background: #0a0a0a;
@@ -405,7 +378,6 @@ footer {
     font-size: 2rem;
   }
   
-  /* Ajustes responsivos para a página de álbuns */
   .album-container {
     padding: 30px 20px;
   }
@@ -415,15 +387,12 @@ footer {
   }
   .album-grid {
     gap: 20px;
-    /* Para telas menores, garante que os cards não fiquem espremidos */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
   .album-item-title {
     font-size: 1.4rem;
   }
 
-
-  /* Estilos do Footer responsivo (Mantidos) */
   .footer-content {
     flex-direction: column;
     text-align: center;

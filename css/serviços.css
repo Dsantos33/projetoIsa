@@ -1,4 +1,3 @@
-/* ========== RESET E BASE ========== */
 * {
     padding: 0;
     margin: 0;
@@ -19,7 +18,6 @@ html, body {
     flex-direction: column;
 }
 
-/* ========== HEADER ========== */
 #headerIndex {
     display: flex;
     justify-content: space-between;
@@ -87,7 +85,6 @@ html, body {
     left: 0;
 }
 
-/* ========== SECTION PRINCIPAL ========== */
 section {
     position: relative;
     display: flex;
@@ -96,7 +93,6 @@ section {
     background: #1a1a1a;
 }
 
-/* ========== CONTAINER PRINCIPAL DOS SERVIÇOS ========== */
 .servicos-container {
     width: 100%;
     min-height: calc(100vh - 80px);
@@ -106,7 +102,6 @@ section {
     background: #1a1a1a;
 }
 
-/* ========== TÍTULO ========== */
 .servicos-title {
     text-align: center;
     font-size: 3.5rem;
@@ -129,7 +124,6 @@ section {
     background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
 }
 
-/* ========== GRID DE SERVIÇOS ========== */
 .servicos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -137,7 +131,6 @@ section {
     padding: 0 20px;
 }
 
-/* ========== ITEM DE SERVIÇO ========== */
 .servico-item {
     position: relative;
     border-radius: 15px;
@@ -149,7 +142,6 @@ section {
     transform: translateY(50px);
 }
 
-/* Animação de entrada */
 .servico-item.animate-in {
     animation: slideInUp 0.8s ease forwards;
 }
@@ -166,14 +158,12 @@ section {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 }
 
-/* ========== CONTAINER DA IMAGEM ========== */
 .servico-image-container {
     position: relative;
     height: 300px;
     overflow: hidden;
 }
 
-/* ========== IMAGEM DO SERVIÇO ========== */
 .servico-image {
     width: 100%;
     height: 100%;
@@ -187,7 +177,6 @@ section {
     filter: brightness(0.6);
 }
 
-/* ========== OVERLAY ========== */
 .servico-overlay {
     position: absolute;
     top: 0;
@@ -213,7 +202,6 @@ section {
     );
 }
 
-/* ========== TÍTULO DO SERVIÇO ========== */
 .servico-titulo {
     font-size: 1.8rem;
     font-weight: 300;
@@ -249,7 +237,6 @@ section {
     transform: translateX(-50%) scaleX(1);
 }
 
-/* ========== EFEITO DE BRILHO ========== */
 .servico-item::before {
     content: '';
     position: absolute;
@@ -271,7 +258,6 @@ section {
     left: 100%;
 }
 
-/* ========== FOOTER ========== */
 footer {
     background: #0a0a0a;
     color: white;
@@ -380,7 +366,6 @@ footer {
     color: #666;
 }
 
-/* ========== RESPONSIVIDADE ========== */
 @media (max-width: 1200px) {
     .servicos-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -482,12 +467,10 @@ footer {
     }
 }
 
-/* ========== SCROLL SUAVE ========== */
 html {
     scroll-behavior: smooth;
 }
 
-/* ========== MOBILE MENU ========== */
 .mobile-menu {
     position: fixed;
     top: 0;
